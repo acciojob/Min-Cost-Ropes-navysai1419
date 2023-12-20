@@ -77,6 +77,7 @@ class MinHeap {
 }
 
 function mincost(arr) {
+  // Create a MinHeap instance
   const minHeap = new MinHeap();
 
   // Populate the min heap with initial rope lengths
@@ -84,10 +85,12 @@ function mincost(arr) {
     minHeap.push(ropeLength);
   });
 
+  // Initialize the total cost
   let totalCost = 0;
 
   // Continue until there is only one rope left in the heap
   while (!minHeap.isEmpty()) {
+    // Extract the two smallest ropes from the heap
     const rope1 = minHeap.pop();
     const rope2 = minHeap.pop();
 
